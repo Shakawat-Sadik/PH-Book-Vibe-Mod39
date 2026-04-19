@@ -7,7 +7,7 @@ import HydrateFallbackElement from "./component/HydrateFallbackElement";
 import Root from "./component/Root";
 import { RouterProvider } from "react-router";
 import ErrorPage from "./component/ErrorPage";
-import App from '../app/root';
+import GoBackOrHome from "./component/GoBackOrHome";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    Component:,
+    Component: GoBackOrHome,
     ErrorBoundary: ErrorPage,
   }
 ]);

@@ -1,9 +1,10 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 import styled from 'styled-components';
 
-const HydrateFallbackElement = () => {
+const HydrateFallbackElement = ({className}) => {
   return (
-    <div>
+    <div className={cn("",className)}>
       <StyledWrapper>
         <div className="spinner">
           <div />
@@ -23,8 +24,8 @@ const StyledWrapper = styled.div`
   .spinner {
     width: 70.4px;
     height: 70.4px;
-    --clr: rgb(247, 197, 159);
-    --clr-alpha: rgb(247, 197, 159,.1);
+    --clr-alpha: rgba(124, 207, 0, 0.5);
+    --clr: rgba(0, 166, 62, 0.8);
     animation: spinner 1.6s infinite ease;
     transform-style: preserve-3d;
   }
