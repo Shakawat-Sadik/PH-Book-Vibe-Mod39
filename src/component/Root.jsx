@@ -120,7 +120,7 @@ const Root = () => {
               {/* Authors with Submenu */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger>
-                  <NavLinkHook to="/books">Authors</NavLink>
+                  <NavLinkHook to="/books">Authors</NavLinkHook>
                 </NavigationMenuTrigger>
                 <NavigationMenuPositioner>
                   <NavigationMenuPopup>
