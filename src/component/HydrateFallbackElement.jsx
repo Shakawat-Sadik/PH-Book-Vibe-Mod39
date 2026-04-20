@@ -1,83 +1,28 @@
 import { cn } from "@/lib/utils";
-import React from "react";
-import styled from 'styled-components';
 
-const HydrateFallbackElement = ({className}) => {
+const HydrateFallbackElement = ({ className }) => {
   return (
-    <div className={cn("",className)}>
-      <StyledWrapper>
-        <div className="spinner">
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
+    <div className={cn("", className)}>
+      <div className="p-2 animate-spin dark:drop-shadow-2xl bg-linear-to-bl from-lime-400 via-green-400 to-green-600 md:w-20 md:h-20 h-12 w-12 aspect-square rounded-full">
+        <div className="rounded-sm h-full w-full bg-white dark:bg-zinc-900 background-blur-md">
+          <div className="grid grid-cols-2">
+            <div className="p-1 animate-spin dark:drop-shadow-2xl bg-linear-to-bl from-lime-400 via-green-400 to-green-600 md:w-8 md:h-8 h-4 w-4 aspect-auto rounded-xs">
+              <div className="rounded-xs h-full w-full bg-white dark:bg-zinc-900 background-blur-md"></div>
+            </div>
+            <div className="p-1 animate-spin dark:drop-shadow-2xl bg-linear-to-bl from-lime-400 via-green-400 to-green-600 md:w-8 md:h-8 h-4 w-4 aspect-auto rounded-xs">
+              <div className="rounded-xs h-full w-full bg-white dark:bg-zinc-900 background-blur-md"></div>
+            </div>
+            <div className="p-1 animate-spin dark:drop-shadow-2xl bg-linear-to-bl from-lime-400 via-green-400 to-green-600 md:w-8 md:h-8 h-4 w-4 aspect-auto rounded-xs">
+              <div className="rounded-xs h-full w-full bg-white dark:bg-zinc-900 background-blur-md"></div>
+            </div>
+            <div className="p-1 animate-spin dark:drop-shadow-2xl bg-linear-to-bl from-lime-400 via-green-400 to-green-600 md:w-8 md:h-8 h-4 w-4 aspect-auto rounded-xs">
+              <div className="rounded-xs h-full w-full bg-white dark:bg-zinc-900 background-blur-md"></div>
+            </div>
+          </div>
         </div>
-      </StyledWrapper>
+      </div>
     </div>
   );
 };
-
-
-const StyledWrapper = styled.div`
-  .spinner {
-    width: 70.4px;
-    height: 70.4px;
-    --clr-alpha: rgba(124, 207, 0, 0.5);
-    --clr: rgba(0, 166, 62, 0.8);
-    animation: spinner 1.6s infinite ease;
-    transform-style: preserve-3d;
-  }
-
-  .spinner > div {
-    background-color: var(--clr-alpha);
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    border: 3.5px solid var(--clr);
-  }
-
-  .spinner div:nth-of-type(1) {
-    transform: translateZ(-35.2px) rotateY(180deg);
-  }
-
-  .spinner div:nth-of-type(2) {
-    transform: rotateY(-270deg) translateX(50%);
-    transform-origin: top right;
-  }
-
-  .spinner div:nth-of-type(3) {
-    transform: rotateY(270deg) translateX(-50%);
-    transform-origin: center left;
-  }
-
-  .spinner div:nth-of-type(4) {
-    transform: rotateX(90deg) translateY(-50%);
-    transform-origin: top center;
-  }
-
-  .spinner div:nth-of-type(5) {
-    transform: rotateX(-90deg) translateY(50%);
-    transform-origin: bottom center;
-  }
-
-  .spinner div:nth-of-type(6) {
-    transform: translateZ(35.2px);
-  }
-
-  @keyframes spinner {
-    0% {
-      transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
-    }
-
-    50% {
-      transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
-    }
-
-    100% {
-      transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
-    }
-  }`;
 
 export default HydrateFallbackElement;
