@@ -39,6 +39,7 @@
     --sidebar-accent-foreground: oklch(0.218 0.008 223.9);
     --sidebar-border: oklch(0.925 0.005 214.3);
     --sidebar-ring: oklch(0.723 0.014 214.4);
+    --theme-shadow:  0 0 0.5rem 0.25rem rgba(208, 177, 55, 0.8);
 }
 
 .dark {
@@ -73,6 +74,7 @@
     --sidebar-accent-foreground: oklch(0.987 0.002 197.1);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.56 0.021 213.5);
+    --theme-shadow:  0 0 0.75rem 0.5rem rgba(181, 181, 184, 0.5);
 }
 
 @theme inline {

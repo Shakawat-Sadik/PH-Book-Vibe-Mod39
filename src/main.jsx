@@ -18,17 +18,16 @@ const router = createBrowserRouter([
     ErrorBoundary: ErrorPage,
     children: [
       {
+        path: "*",
+        Component: GoBackOrHome,
+        ErrorBoundary: ErrorPage,
+      },
+      {
         path: "App",
         Component: App,
-
-      }
-    ]
+      },
+    ],
   },
-  {
-    path: "*",
-    Component: GoBackOrHome,
-    ErrorBoundary: ErrorPage,
-  }
 ]);
 
 createRoot(document.getElementById("root")).render(
