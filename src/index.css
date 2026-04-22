@@ -118,6 +118,10 @@
     --radius-2xl: calc(var(--radius) * 1.8);
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
+    --spin-1: spin 2s linear infinite;
+    --spin-2: spin 1s linear infinite;
+    --spin-3: spin 500ms linear infinite;
+    --spin-4: spin 250ms linear infinite;
 }
 
 @layer base {
