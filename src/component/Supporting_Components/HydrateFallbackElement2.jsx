@@ -3,7 +3,7 @@ import React from "react";
 
 const HydrateFallbackElement2 = ({ className }) => {
   return (
-    <div className="flex justify-center items-center h-screen bg-background">
+    <div className="flex justify-center items-center h-screen bg-white dark:bg-black">
       <div className={cn("animate-none", className)}>
         <div className="animate-bounce grid grid-cols-2">
           <div className="p-1 animate-(--spin-1) dark:drop-shadow-2xl bg-linear-to-bl from-white to-black md:w-8 md:h-8 h-4 w-4 aspect-auto rounded-xs">

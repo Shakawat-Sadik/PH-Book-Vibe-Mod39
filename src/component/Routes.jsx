@@ -7,6 +7,7 @@ import ErrorPage from "./Supporting_Components/ErrorPage";
 import GoBackOrHome from './Supporting_Components/GoBackOrHome';
 import Homepage from './2_Homepage/Homepage.jsx';
 import Bookshelf from './2_Homepage/2.2_Bookshelf/2.2_Bookshelf.jsx';
+import BookDetails from './2_Homepage/2.2_Bookshelf/2.2.2_BookDetails/2.2.2_BookDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,8 +36,8 @@ const router = createBrowserRouter([
       },
       {
         path: "Books/:id",
-        loader: async({params}) => await fetch(`/booksData.json`),
-        Component: Bookshelf,
+        loader: async() =>  await fetch(`/booksData.json`),
+        Component: BookDetails,
       },
     ],
   },

@@ -39,21 +39,21 @@ const Root = () => {
   }
 */
   return (
-    <div className="flex flex-col max-h-screen">
+    <div className="flex flex-col min-h-screen min-w-screen">
       {/* Header with Theme Toggle */}
       <header className="sticky top-0 z-40 border-b border-border bg-background">
         <NavMenu isDark={isDark} setIsDark={setIsDark}></NavMenu>
       </header>
 
       {/* Main Content */}
-      <main className="flex justify-center flex-1 overflow-auto">
-        <div className="flex flex-col items-center min-h-0 flex-1">
+      <main className="flex justify-center h-full flex-1 overflow-auto">
+        <div className="flex flex-col items-center flex-1">
           <Outlet/>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="bottom-0 w-full border-t border-border bg-background p-6 text-center text-sm text-muted-foreground">
+      <footer className="sticky bottom-0 w-full border-t border-border bg-background p-6 text-center text-sm text-muted-foreground">
         <p>&copy; 2023 Book Vibe. All rights reserved.</p>
       </footer>
     </div>
