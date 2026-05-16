@@ -27,7 +27,7 @@ const NavMenu = ({isDark, setIsDark}) => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link to="#">
+                <Link to="/">
                   <span className="text-3xl font-bold">Book Vibe</span>
                 </Link>
               </NavigationMenuItem>
@@ -44,7 +44,7 @@ const NavMenu = ({isDark, setIsDark}) => {
               {/* Books with Submenu */}
               <NavigationMenuItem>
                 <NavigationMenuTrigger>
-                  <NavLinkHook to="/books">
+                  <NavLinkHook to="/ListedBooks">
                     Listed Books
                   </NavLinkHook>
                 </NavigationMenuTrigger>
@@ -113,10 +113,10 @@ const NavMenu = ({isDark, setIsDark}) => {
             <NavigationMenuList className="space-x-7">
               <NavigationMenuList className="space-x-1">
                 <NavigationMenuItem>
-                  <Button className="">Log In</Button>
+                  <Button className="text-background">Log In</Button>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Button className="cursor-pointer hover:-translate-y-px">Sign Up</Button>
+                  <Button className="text-background cursor-pointer hover:-translate-y-px">Sign Up</Button>
                 </NavigationMenuItem>
               </NavigationMenuList>
               <NavigationMenuItem>

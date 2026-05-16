@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
+import NavMenu from "./1_Header/NavMenu";
 import { Outlet } from "react-router";
-import HydrateFallbackElement2 from "./Supporting_Components/HydrateFallbackElement2";
-import NavMenu from './1_Header/NavMenu';
-import HeroCard from './2_Homepage/2.1_Hero/HeroCard';
+import BookShelfProvider from "./ContextAPI/BookShelfProvider";
+import { Toaster } from "@/components/ui/sonner";
 
 const Root = () => {
   let [isDark, setIsDark] = useState(() => {
@@ -21,7 +21,7 @@ const Root = () => {
   useEffect(() => {
     isDark ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark"); // Apply dark class to html element
   }, [isDark]); //To be noted
-/*
+  /*
   const [isLoading, setIsLoading] = useState(true);
   //   const [isActive, setIsActive] = useState(false);
 
@@ -47,8 +47,19 @@ const Root = () => {
 
       {/* Main Content */}
       <main className="flex justify-center h-full flex-1 overflow-auto">
-        <div className="flex flex-col items-center flex-1">
-          <Outlet/>
+        <div className="flex flex-col items-center h-full flex-1 my-5">
+          <BookShelfProvider>
+            <Toaster
+              theme={isDark}
+              toastOptions={{
+                classNames: {
+                  actionButton: "bg-zinc-700 dark:text-green-500 dark:bg-zinc-700 text-zinc-300",
+                  // This ensures the button always follows your theme
+                },
+              }}
+            />
+            <Outlet />
+          </BookShelfProvider>
         </div>
       </main>
 
